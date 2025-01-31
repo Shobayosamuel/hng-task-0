@@ -22,7 +22,7 @@ func main() {
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
             "email":          "shobayosamuel62@gmail.com",
-            "current_datetime": time.Now().UTC().Format(time.RFC3339)
+            "current_datetime": time.Now().UTC().Format(time.RFC3339),
             "github_url":     "https://github.com/Shobayosamuel/hng-task-0",
         })
 	})
