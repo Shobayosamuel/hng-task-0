@@ -4,10 +4,12 @@ import (
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"time"
+	"os"
 )
 
 
 func main() {
+	gin.SetMode(gin.ReleaseMode)
 	r := gin.Default()
 	r.Use(func(c *gin.Context) {
 		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
@@ -26,5 +28,9 @@ func main() {
             "github_url":     "https://github.com/Shobayosamuel/hng-task-0",
         })
 	})
-	r.Run(":8080")
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	r.Run(":" + port)
 }
