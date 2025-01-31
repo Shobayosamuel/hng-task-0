@@ -7,3 +7,11 @@ This is a simple API that returns my HNG12 Slack email, the current datetime in 
 1. Clone the repository:
    ```bash
    git clone https://github.com/Shobayosamuel/hng-task-0/
+
+2. Install dependencies:
+   ```bash
+   go mod tidy
+
+3 Run the app
+  ```bash
+  go run main.go
